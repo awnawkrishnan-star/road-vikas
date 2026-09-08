@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Vikas | A Podar Project Synthesis</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #17202a;
+            background: #f5f7fa;
+        }
+        nav {
+            position: sticky; top: 0; z-index: 10;
+            background: #ffffff;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 16px 7%;
+            box-shadow: 0 2px 12px rgba(0,0,0,.08);
+        }
+        .logo { font-size: 25px; font-weight: 800; color: #1769aa; }
+        .logo span { color: #f39c12; }
+        nav a { text-decoration: none; color: #333; margin-left: 24px; font-weight: 600; }
+        nav a:hover { color: #1769aa; }
+        .hero {
+            min-height: 76vh;
+            padding: 80px 7%;
+            display: flex; align-items: center; justify-content: space-between; gap: 50px;
+            background: linear-gradient(135deg, #eaf6ff 0%, #ffffff 55%, #fff5df 100%);
+        }
+        .hero-text { max-width: 650px; }
+        .tag {
+            display: inline-block; padding: 8px 14px; border-radius: 30px;
+            background: #fff0cf; color: #9a6200; font-weight: 700; margin-bottom: 18px;
+        }
+        h1 { font-size: clamp(42px, 6vw, 72px); line-height: 1.02; margin-bottom: 20px; }
+        h1 span { color: #1769aa; }
+        .hero p { font-size: 19px; line-height: 1.7; color: #566573; margin-bottom: 30px; }
+        .buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+        .btn {
+            display: inline-block; padding: 14px 22px; border-radius: 10px;
+            text-decoration: none; font-weight: 800; transition: .2s;
+        }
+        .primary { background: #1769aa; color: white; }
+        .primary:hover { background: #0e4f82; transform: translateY(-2px); }
+        .secondary { border: 2px solid #1769aa; color: #1769aa; background: white; }
+        .secondary:hover { background: #eaf6ff; }
+        .road-art {
+            width: min(420px, 90vw); height: 300px; border-radius: 28px;
+            background: #273746; position: relative; overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,.16);
+        }
+        .road-art:before {
+            content: ""; position: absolute; width: 140px; height: 500px;
+            background: #566573; left: 140px; top: -80px; transform: rotate(10deg);
+        }
+        .road-art:after {
+            content: ""; position: absolute; width: 8px; height: 420px;
+            background: repeating-linear-gradient(to bottom, #f8f9f9 0 35px, transparent 35px 65px);
+            left: 207px; top: -50px; transform: rotate(10deg);
+        }
+        section { padding: 75px 7%; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 12px; }
+        .section-sub { text-align: center; color: #68757f; margin-bottom: 40px; }
+        .cards {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+        }
+        .card {
+            background: white; padding: 28px; border-radius: 18px;
+            box-shadow: 0 8px 28px rgba(0,0,0,.07);
+        }
+        .icon { font-size: 34px; margin-bottom: 14px; }
+        .card h3 { margin-bottom: 10px; font-size: 21px; }
+        .card p { color: #68757f; line-height: 1.6; }
+        .cta {
+            margin: 20px 7% 70px; padding: 55px 7%;
+            border-radius: 25px; background: #1769aa; color: white; text-align: center;
+        }
+        .cta h2 { font-size: 38px; margin-bottom: 12px; }
+        .cta p { margin-bottom: 24px; opacity: .9; }
+        .cta .primary { background: white; color: #1769aa; }
+        footer { text-align: center; padding: 28px; background: #17202a; color: #dfe6e9; }
+        @media (max-width: 800px) {
+            nav { padding: 15px 5%; }
+            nav div:last-child { display: none; }
+            .hero { padding: 55px 5%; flex-direction: column; text-align: center; }
+            .buttons { justify-content: center; }
+            .cards { grid-template-columns: 1fr; }
+            section { padding: 55px 5%; }
+            .cta { margin: 10px 5% 50px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo"> <span></span></div>
+    <div>
+                <a href="Road Vikas.html">Report Issue</a>
+    </div>
+</nav>
+
+<main id="home">
+    <section class="hero">
+        <div class="hero-text">
+            <div class="tag">Project: Road Vikas</div>
+            <h1>A Podar.<br><span>Project Synthesis.</span></h1>
+            <p>
+                Found a pothole, damaged road, waterlogging, or another road-related
+                problem? Report it through Road Vikas and help bring attention to issues
+                in your area.
+            </p>
+            <div class="buttons">
+                <a class="btn primary" href="Road Vikas.html">Report a Road Issue</a>
+                <a class="btn secondary" href="#how">Learn How It Works</a>
+            </div>
+        </div>
+        <div class="road-art" aria-label="Road illustration"></div>
+    </section>
+
+    <section id="how">
+        <h2 class="section-title">How Road Vikas Works</h2>
+        <p class="section-sub">Three simple steps to make your voice heard.</p>
+        <div class="cards">
+            <div class="card">
+                <div class="icon"></div>
+                <h3>1. Spot an Issue</h3>
+                <p>Notice a pothole, damaged road, or another problem affecting your locality.</p>
+            </div>
+            <div class="card">
+                <div class="icon"></div>
+                <h3>2. Submit a Report</h3>
+                <p>Tell us the state, city, locality, road name, address, and details of the issue.</p>
+            </div>
+            <div class="card">
+                <div class="icon"></div>
+                <h3>3. Help Drive Change</h3>
+                <p>Your report creates a clear record of the problem and helps highlight areas that need attention.</p>
+            </div>
+        </div>
+    </section>
+
+        <div class="cta">
+        <h2>See a road problem?</h2>
+        <p>Don't just drive past it. Report it.</p>
+        <a class="btn primary" href="Road Vikas.html">Report an Issue</a>
+    </div>
+</main>
+
+<footer>
+    © 2026 Road Vikas — Report. Improve. Transform.
+</footer>
+
+</body>
+</html>

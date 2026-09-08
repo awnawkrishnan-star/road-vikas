@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5f7;
+    color: #17202a;
+}
+
+.card {
+    width: min(760px, calc(100% - 30px));
+    margin: 50px auto;
+    background: #fff;
+    padding: 38px;
+    border: 1px solid #e1e5e9;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.07);
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.subtitle {
+    margin: 0 0 28px;
+    color: #6f7a85;
+}
+
+form {
+    display: grid;
+    gap: 7px;
+}
+
+label {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .4px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d5dbe1;
+    border-radius: 9px;
+    font: inherit;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #17202a;
+    box-shadow: 0 0 0 3px rgba(23,32,42,.08);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 9px;
+    background: #17202a;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2d3945;
+}
+
+.confirmation, .issue-card {
+    max-width: 650px;
+    text-align: center;
+}
+
+.success {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #eaf7ef;
+    color: #27834b;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.summary {
+    margin: 25px 0;
+    padding: 15px;
+    background: #f7f8fa;
+    border-radius: 10px;
+}
+
+.small {
+    color: #707b86;
+}
+
+.issue-id {
+    margin: 28px 0 15px;
+    padding: 22px;
+    background: #f7f8fa;
+    border: 1px dashed #c7ced5;
+    border-radius: 12px;
+}
+
+.issue-id span {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #7b8691;
+}
+
+.issue-id strong {
+    display: block;
+    margin: 8px 0 15px;
+    font-family: monospace;
+    font-size: 27px;
+    letter-spacing: 1px;
+}
+
+.copy {
+    margin: 0;
+    padding: 8px 13px;
+    background: white;
+    color: #17202a;
+    border: 1px solid #d5dbe1;
+}
+
+.status {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #eef7f1;
+    color: #287848;
+    font-size: 13px;
+}
+
+.details {
+    text-align: left;
+    border-top: 1px solid #e5e9ed;
+    padding-top: 20px;
+}
+
+.details h2 {
+    font-size: 19px;
+}
+
+.details p {
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #eef0f2;
+}
+
+.details p strong {
+    display: inline-block;
+    min-width: 145px;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
+
+    .actions {
+        grid-template-columns: 1fr;
+    }
+
+    .issue-id strong {
+        font-size: 22px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 0;
+        margin: 0 auto;
+    }
+
+    .actions, .copy {
+        display: none;
+    }
+}

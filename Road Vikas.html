@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Vikas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Road Vikas</h1>
+        <p class="subtitle">Report a road-related issue</p>
+
+        <form id="issueForm">
+            <label for="state">STATE</label>
+            <select id="state" required>
+                <option value="">Select State / Union Territory</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Chandigarh</option>
+                <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                <option>Delhi (National Capital Territory of Delhi)</option>
+                <option>Jammu and Kashmir</option>
+                <option>Ladakh</option>
+                <option>Lakshadweep</option>
+                <option>Puducherry</option>
+            </select>
+
+            <label for="city">CITY</label>
+            <input type="text" id="city" name="Cname" required>
+
+            <label for="locality">LOCALITY</label>
+            <input type="text" id="locality" name="Lname" required>
+
+            <label for="roadName">ROAD NAME</label>
+            <input type="text" id="roadName" name="Rname" required>
+
+            <label for="address">ADDRESS OF THE ISSUE</label>
+            <textarea id="address" rows="4" required></textarea>
+
+            <label for="description">PLEASE DESCRIBE THE ISSUE</label>
+            <textarea id="description" rows="5" required></textarea>
+
+           <button type="submit">
+    Submit
+</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue ID | Road Vikas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card issue-card">
+        <div class="success">✓</div>
+        <h1>ISSUE REGISTERED</h1>
+        <p>Your road issue has been successfully registered.</p>
+
+        <section class="issue-id">
+            <span>YOUR UNIQUE ISSUE ID</span>
+            <strong id="issueId">—</strong>
+            <button type="button" class="copy" id="copyBtn">Copy Issue ID</button>
+        </section>
+
+        <div class="status">● <span id="status">Received</span></div>
+
+        <section class="details">
+            <h2>Report Details</h2>
+            <p><strong>State:</strong> <span id="state"></span></p>
+            <p><strong>City:</strong> <span id="city"></span></p>
+            <p><strong>Locality:</strong> <span id="locality"></span></p>
+            <p><strong>Road Name:</strong> <span id="roadName"></span></p>
+            <p><strong>Issue Address:</strong> <span id="address"></span></p>
+            <p><strong>Description:</strong> <span id="description"></span></p>
+            <p><strong>Date:</strong> <span id="date"></span></p>
+            <p><strong>Time:</strong> <span id="time"></span></p>
+        </section>
+
+        <div class="actions">
+            <button type="button" onclick="window.print()">Print</button>
+            <button type="button" onclick="window.location.href='Road Vikas.html'">New Report</button>
+        </div>
+    </main>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem("currentIssue"));
+
+        if (!data) {
+            window.location.href = "Road Vikas.html";
+        } else {
+            document.getElementById("issueId").textContent = data.id;
+            document.getElementById("status").textContent = data.status;
+            document.getElementById("state").textContent = data.state;
+            document.getElementById("city").textContent = data.city;
+            document.getElementById("locality").textContent = data.locality;
+            document.getElementById("roadName").textContent = data.roadName;
+            document.getElementById("address").textContent = data.address;
+            document.getElementById("description").textContent = data.description;
+            document.getElementById("date").textContent = data.date;
+            document.getElementById("time").textContent = data.time;
+        }
+
+        document.getElementById("copyBtn").addEventListener("click", async function () {
+            try {
+                await navigator.clipboard.writeText(data.id);
+                this.textContent = "Copied ✓";
+                setTimeout(() => this.textContent = "Copy Issue ID", 1800);
+            } catch {
+                alert("Issue ID: " + data.id);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Road Vikas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card confirmation">
+        <div class="success">✓</div>
+        <h1>THANK YOU</h1>
+        <p>Your response has been recorded successfully.</p>
+
+        <div class="summary">
+            <p><strong>Report Date:</strong> <span id="reportDate">—</span></p>
+            <p><strong>Report Time:</strong> <span id="reportTime">—</span></p>
+        </div>
+
+        <p class="small">Click below to generate your unique Issue ID.</p>
+
+        <button type="button" onclick="window.location.href='issue.html'">
+            Generate Issue ID →
+        </button>
+    </main>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem("currentIssue"));
+        if (!data) {
+            window.location.href = "Road Vikas.html";
+        } else {
+            document.getElementById("reportDate").textContent = data.date;
+            document.getElementById("reportTime").textContent = data.time;
+        }
+    </script>
+</body>
+</html>
